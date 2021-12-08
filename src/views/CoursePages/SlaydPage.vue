@@ -1,0 +1,30 @@
+<template>
+  <div class="main">
+    <span style="font-size: 50px; color: #d00808">{{ demo }}</span>
+    <span style="font-size: 50px; color: #d00808">{{ username }}</span>
+  </div>
+</template>
+
+<script>
+import {mapState, mapGetters} from 'vuex';
+export default {
+computed: {
+...mapState({
+  demo: (state)=>state.orderModule.name
+}),
+  ...mapGetters({
+    username: "orderModule/getName",
+  })
+
+}
+}
+</script>
+
+<style scoped>
+.main{
+  border: 1px solid #B3C1D8;
+  border-radius: 11px;
+  background: #FFFFFF;
+  padding: 200px 200px;
+}
+</style>
