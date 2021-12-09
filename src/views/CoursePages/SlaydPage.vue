@@ -10,10 +10,10 @@ import {mapState, mapGetters} from 'vuex';
 export default {
 computed: {
 ...mapState({
-  demo: (state)=>state.orderModule.name
+  demo: (state)=>state.courseModule.name
 }),
   ...mapGetters({
-    username: "orderModule/getName",
+    username: "courseModule/getName",
   })
 
 }

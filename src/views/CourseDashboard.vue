@@ -23,9 +23,14 @@
           <span>Qidirish...</span>
         </div>
         <div class="sidebar-list-card">
-          <div class="list-items"><span>Birinchi Dars</span></div>
-          <div class="list-items"><span>Ikkinchi Dars</span></div>
-          <div class="list-items"><span>Uchinchi Dars</span></div>
+          <div class="list-items"
+               v-for="(lesson, i) in lessons"
+               :key="i"
+               :class="{ 'active-list': i === activeItem}"
+               @click="selectItem(i)"
+          ><span>{{i.toUpperCase()}} </span></div>
+<!--          <div class="list-items"><span>Ikkinchi Dars</span></div>-->
+<!--          <div class="list-items"><span>Uchinchi Dars</span></div>-->
         </div>
 
       </div>
@@ -45,36 +50,55 @@
 export default {
 data(){
   return{
-    dars1:{
-      rasmlar:[
+    activeItem: 0,
+    lessons: {
+      lesson_1:{
+        rasmlar:[
           "m.jpg","k.jpg"
-      ],
-      test:[
-        {
-          savol:"Nima?",
-          variant:["Bilmiman","^Hechnima","Nimadur","Vapshe bilmiman"]
-        }
-      ]
-    },
-    dars2:{
-      rasmlar:[
-        "m.jpg","k.jpg"
-      ],
-      test:[
-        {
-          savol:"Nima?",
-          variant:["Bilmiman","^Hechnima","Nimadur","Vapshe bilmiman"]
-        },
-        {
-          savol:"Nima?",
-          variant:["Bilmiman","^Hechnima","Nimadur","Vapshe bilmiman"]
-        }
-      ]
+        ],
+        test:[
+          {
+            savol:"Nima?",
+            variant:["Bilmiman","^Hechnima","Nimadur","Vapshe bilmiman"]
+          }
+        ]
+      },
+      lesson_2:{
+        rasmlar:[
+          "m.jpg","k.jpg"
+        ],
+        test:[
+          {
+            savol:"Nima?",
+            variant:["Bilmiman","^Hechnima","Nimadur","Vapshe bilmiman"]
+          },
+          {
+            savol:"Nima?",
+            variant:["Bilmiman","^Hechnima","Nimadur","Vapshe bilmiman"]
+          }
+        ]
+      },
+      lesson_3:{
+        rasmlar:[
+          "m.jpg","k.jpg"
+        ],
+        test:[
+          {
+            savol:"Nima?",
+            variant:["Bilmiman","^Hechnima","Nimadur","Vapshe bilmiman"]
+          }
+        ]
+      },
     }
   }
 },
   components: {
     "nav-links": require("@/components/courseComponents/NavbarLink.vue").default,
+  },
+  methods: {
+    selectItem(val){
+      this.activeItem = val
+    }
   }
 }
 </script>
@@ -116,13 +140,22 @@ data(){
 
 }
 .sidebar-list-card .list-items{
-  background: #E7F0FE;
+  /*background: #E7F0FE;*/
   border-radius: 15px;
   padding: 12px 25px;
   margin-bottom: 2px;
 }
+.sidebar-list-card .list-items:hover{
+  background: #42b983;
+  color: #FFFFFF;
+}
+.active-list{
+  background: #E7F0FE;
+
+}
 .content{
   border: 1px solid green;
+  min-width: 1365px;
 
 }
 
