@@ -3,6 +3,7 @@
     <router-link to="/">Home</router-link> |
     <router-link to="/courseDashboard">CourseDashboard</router-link>
 
+
   </div>
   <hr>
   <router-view />

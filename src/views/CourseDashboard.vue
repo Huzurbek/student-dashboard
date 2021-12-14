@@ -82,8 +82,8 @@ data(){
 
 .content{
   /*border: 1px solid green;*/
-  min-width: 1370px;
-
+  /*min-width: 1370px;*/
+flex: 1;
 }
 
 

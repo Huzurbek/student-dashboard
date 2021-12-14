@@ -2,6 +2,7 @@ import { createWebHistory, createRouter } from "vue-router";
 import Home from "@/views/Home.vue";
 import CourseDashboard from "@/views/CourseDashboard.vue";
 
+
 import MainPage from "@/views/CoursePages/MainPage.vue";
 import LessonPage from "@/views/CoursePages/LessonPage.vue";
 import SlaydPage from "@/views/CoursePages/SlaydPage.vue";
@@ -52,6 +53,7 @@ const routes = [
 
         ]
     },
+
 ];
 
 const router = createRouter({

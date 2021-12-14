@@ -24,7 +24,7 @@ computed: {
 .main{
   border: 1px solid #B3C1D8;
   border-radius: 11px;
-  background: url("https://cdn.pixabay.com/photo/2021/12/04/10/58/nature-6844982__340.jpg") no-repeat center fixed ;
+  background: url("https://cdn.pixabay.com/photo/2021/11/30/13/21/vintage-camera-6835351__340.jpg") no-repeat center fixed ;
   background-size: cover;
   padding: 200px 200px;
 }
