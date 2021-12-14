@@ -1,11 +1,10 @@
 // setActiveLesson
 export function setActiveLesson(state, payload) {
-  console.log("payload", payload)
-    state.activeLesson = payload;
+  state.activeLesson = payload;
 }
 export function pushDone(state,payload){
-  state.done.push(payload)
+  state.done[payload.key]=payload.score
 }
 export function removeDoneItem(state){
-  state.done = []
+  state.done = {}
 }

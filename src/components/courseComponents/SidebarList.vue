@@ -6,7 +6,8 @@
          :class="{ 'active-list': i === activeItem}"
          @click="selectItem([lesson,i])"
     >
-      <span>{{i.toUpperCase()}} </span>
+      <span style="cursor: pointer;user-select: none
+">{{i.toUpperCase()}} </span>
     </div>
   </div>
 </template>
@@ -16,7 +17,7 @@ import {mapState } from 'vuex';
 export default {
 data() {
   return{
-    activeItem: null,
+    activeItem: 'lesson_1',
 
   }
 },
@@ -26,10 +27,12 @@ data() {
     }),
 
   },
+mounted() {
 
+},
   methods:{
     selectItem(val){
-      console.log('Lesson info',val[1])
+      console.log('Lesson infoqqqq',val[1])
       this.$store.commit("courseModule/removeDoneItem")
       this.$store.commit("courseModule/setActiveLesson", val[0]);
       this.activeItem = val[1]

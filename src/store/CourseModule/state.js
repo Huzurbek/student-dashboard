@@ -26,7 +26,7 @@ const state=()=>({
                 },
                 {
                     question:"3 birlashtirib qo’yadi . Shu tugmani nomini toping Panelning sarlavha satrida bir tugma joylashgan bo’lib, bu tugmaning vaz ?",
-                    variants:["Bilmiman","@Hechnima","Nimadur","Vapshe bilmiman"]
+                    variants:["@Bilmiman","Hechnima","Nimadur","Vapshe bilmiman"]
                 },
                 {
                     question:"4 birlashtirib qo’yadi . Shu tugmani nomini toping ?",
@@ -38,6 +38,22 @@ const state=()=>({
                 },
                 {
                     question:"6  birlashtirib qo’yadi . Shu tugmani nomini toping Panelning sarlavha satrida bir tugma joylashgan bo’lib, bu tugmaning vaz ?",
+                    variants:["Bilmiman","@Hechnima","Nimadur","Vapshe bilmiman"]
+                },
+                {
+                    question:"7 birlashtirib qo’yadi . Shu tugmani nomini toping Panelning sarlavha satrida bir tugma joylashgan bo’lib, bu tugmaning vaz ?",
+                    variants:["@Bilmiman","Hechnima","Nimadur","Vapshe bilmiman"]
+                },
+                {
+                    question:"8 birlashtirib qo’yadi . Shu tugmani nomini toping ?",
+                    variants:["Bilmiman","@Hechnima","Nimadur","Vapshe bilmiman"]
+                },
+                {
+                    question:"9  birlashtirib qo’yadi . Shu tugmani nomini toping Panelning sarlavha satrida bir tugma joylashgan bo’lib, bu tugmaning vaz ?",
+                    variants:["Bilmiman","@Hechnima","Nimadur","Vapshe bilmiman"]
+                },
+                {
+                    question:"10  birlashtirib qo’yadi . Shu tugmani nomini toping Panelning sarlavha satrida bir tugma joylashgan bo’lib, bu tugmaning vaz ?",
                     variants:["Bilmiman","@Hechnima","Nimadur","Vapshe bilmiman"]
                 }
             ]
@@ -108,9 +124,8 @@ const state=()=>({
             ]
         },
     },
-    activeLesson: {},
-    done: []
-
+    activeLesson: null,
+    done: {}
 
     // lesson1:{
     //     picture:[
